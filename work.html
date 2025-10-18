@@ -1,0 +1,73 @@
+import React from "react";
+import "./Work.css";
+
+const Work = () => {
+  return (
+    <div className="container">
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="navbar-brand">
+          <h1>Arnav Raj</h1>
+          <span className="tagline">Product Designer</span>
+        </div>
+
+        <div className="nav-links">
+          <a href="/" className="nav-link active">Work</a>
+          <a href="/info" className="nav-link">Info</a>
+          <button className="rectangle-button"></button>
+        </div>
+
+        <div className="external-links">
+          <a
+            href="https://www.linkedin.com/in/arnav-raj-7a7296246/"
+            className="nav-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/136Os0Iyq4D61sJybNbFYByhAlsa0vW30"
+            className="nav-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="box">
+        <div className="rectangle"></div>
+
+        {/* Apple style bar */}
+        <div className="apple-bar">
+          <div className="apple-dot dot-red"></div>
+          <div className="apple-dot dot-yellow"></div>
+          <div className="apple-dot dot-green"></div>
+          <div className="plus-button">+</div>
+        </div>
+
+        <div className="ac-rectangle">
+          <h1 className="hero-title">
+            I craft experiences,
+            <br />
+            interfaces & <span className="soln">solutions.</span>
+          </h1>
+          <p className="hero-subtitle">
+            I bring creativity, user-centric designs, and emerging tech into one
+            place.
+          </p>
+          <p className="status">
+            Currently a UI/UX Designer. Based in India.
+            <br />
+            Formerly at Kinesis Lab, IIT Guwahati and SharkIn.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Work;

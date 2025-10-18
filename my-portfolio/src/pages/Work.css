@@ -1,0 +1,560 @@
+/* ---------------------------
+ Root Colors
+---------------------------- */
+:root {
+ --primary: #000;
+ --secondary: #fff;
+ --gray: #808080;
+ --light-gray: #d9d9d9;
+ --accent: #ff4d4d;
+ --yellow: #ffcc00;
+ --green: #00cc44;
+}
+
+/* ---------------------------
+ Fonts
+---------------------------- */
+@font-face {
+ font-family: 'Neue Montreal';
+ src: url('path/to/NeueMontreal-Regular.woff2') format('woff2'),
+   url('path/to/NeueMontreal-Regular.woff') format('woff');
+ font-weight: 400;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'Neue Montreal';
+ src: url('path/to/NeueMontreal-Medium.woff2') format('woff2'),
+   url('path/to/NeueMontreal-Medium.woff') format('woff');
+ font-weight: 500;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'Neue Montreal';
+ src: url('path/to/NeueMontreal-Bold.woff2') format('woff2'),
+   url('path/to/NeueMontreal-Bold.woff') format('woff');
+ font-weight: 700;
+ font-style: normal;
+}
+
+/* ---------------------------
+ Global
+---------------------------- */
+.work-page {
+ position: relative;
+ min-height: 100vh;
+ width: 100%;
+ /* ✅ UPDATED: Swapped the linear gradient for a radial gradient to match the image */
+ background-color: #0B0B0B; /* Solid fallback color */
+ background-image: radial-gradient(
+  ellipse 80% 70% at 50% 0%, /* A wide ellipse positioned at the top-center */
+  rgba(255, 255, 255, 0.15) 0%, /* A subtle white glow at the center */
+  rgba(11, 11, 11, 0) 100%    /* Fades out to transparent, showing the background color */
+ );
+ background-attachment: fixed; /* This makes the background stay in place on scroll */
+ background-repeat: no-repeat;
+ font-family: 'Neue Montreal', sans-serif;
+ color: #f7f7f7;
+ overflow-x: hidden; /* Prevents horizontal scroll issues */
+ z-index: 0;
+}
+
+/* Make sure all children are above the background effects */
+.work-page > * {
+ position: relative;
+ z-index: 2;
+}
+
+.container {
+ position: relative;
+ z-index: 2;
+ width: 100%;
+ max-width: 1600px;
+ margin: 0 auto;
+ padding: 0 40px;
+ box-sizing: border-box;
+}
+
+
+/* ---------------------------
+ Window Frame / Buttons
+---------------------------- */
+.wf-box {
+ width: 180px;
+ height: 51px;
+ padding-left: 10px;
+ border: 2px solid #8C8C8C;
+ border-radius: 50px;
+ background-color: #444242;
+}
+
+.btn-container {
+ display: flex;
+ gap: 50px;
+ padding: 15px 0;
+}
+
+.wf-btn {
+ font-family: 'Neue Montreal', sans-serif;
+ font-size: 17px;
+ font-weight: 500;
+ color: #F2F2F2;
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ transition: color 0.3s ease;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/* ---------------------------
+ Hero / Boxes
+---------------------------- */
+.upper-box {
+ width: 1364px;
+ height: 645px;
+ margin-left: 300px;
+ margin-bottom: 280px;
+ background: transparent;
+ border-radius: 30px;
+ position: relative;
+}
+
+.upper-box::before {
+ content: "";
+ position: absolute;
+ top: -1px;
+ left: -1px;
+ right: -1px;
+ bottom: -1px;
+ border-radius: 30px;
+ padding: 1px;
+ background: linear-gradient(to bottom, #656565 30%, transparent 50%);
+ -webkit-mask: linear-gradient(white 0 0) content-box,
+  linear-gradient(white 0 0) border-box;
+ -webkit-mask-composite: xor;
+ mask-composite: exclude;
+ pointer-events: none;
+}
+
+.box {
+ width: 1164px;
+ height: 645px;
+ margin: 0 auto 280px auto; /* center horizontally */
+ background: transparent;
+ border-radius: 30px;
+ position: relative;
+}
+
+.apple-bar {
+ display: flex;
+ gap: 6px;
+ position: absolute;
+ top: 40px;
+ left: 30px;
+ z-index: 2;
+}
+
+.apple-dot {
+ width: 12px;
+ height: 12px;
+ border-radius: 50%;
+ box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.dot-red {
+ background-color: #FF5F56;
+ box-shadow: 0 0 8px #FF5F56,
+  0 0 12px rgba(255, 95, 86, 0.5);
+ border: 1px solid #A85647;
+}
+
+.dot-yellow {
+ background-color: #FFBD2E;
+ box-shadow: 0 0 8px #FFBD2E,
+  0 0 12px rgba(255, 189, 46, 0.5);
+ border: 1px solid #BF9F50;
+}
+
+.dot-green {
+ background-color: #27C93F;
+ box-shadow: 0 0 8px #27C93F,
+  0 0 12px rgba(39, 201, 63, 0.5);
+ border: 1px solid #679C4F;
+}
+
+.plus-button {
+ position: absolute;
+ top: -10px;
+ left: 1068px;
+ font-family: "Neue Montreal", sans-serif;
+ font-weight: 300;
+ font-size: 40px;
+ line-height: 100%;
+ color: #BABABA;
+}
+
+.box::before {
+ content: "";
+ position: absolute;
+ top: -1px;
+ left: -1px;
+ right: -1px;
+ bottom: -1px;
+ border-radius: 30px;
+ padding: 1px;
+ background: linear-gradient(to bottom, #656565 30%, transparent 50%);
+ -webkit-mask: linear-gradient(white 0 0) content-box,
+  linear-gradient(white 0 0) border-box;
+ -webkit-mask-composite: xor;
+ mask-composite: exclude;
+ pointer-events: none;
+}
+
+.rectangle {
+ width: 1136px;
+ height: 600px;
+ position: absolute;
+ top: 20px;
+ left: 50%; /* center horizontally */
+ transform: translateX(-50%); /* adjust alignment */
+ border-radius: 30px;
+ background-color: rgba(186, 186, 186, 0.4); /* translucent white */
+}
+
+
+.ac-rectangle {
+ width: 1140px;
+ height: 550px;
+ position: absolute;
+ top: 70px;
+ left: 50%; /* center horizontally */
+ transform: translateX(-50%);
+ border-radius: 20px;
+ background-color: rgba(30, 30, 30, 0.9); /* translucent dark */
+}
+
+.ac-rectangle::before {
+ content: "";
+ position: absolute;
+ top: -1px;
+ left: -1px;
+ right: -1px;
+ bottom: -1px;
+ border-radius: 20px;
+ padding: 1px;
+ background: linear-gradient(to bottom, #BABABA 10%, transparent 40%);
+ -webkit-mask: linear-gradient(white 0 0) content-box,
+  linear-gradient(white 0 0) border-box;
+ -webkit-mask-composite: xor;
+ mask-composite: exclude;
+ pointer-events: none;
+}
+
+/* ---------------------------
+ Hero Text
+---------------------------- */
+.hero-title {
+ font-family: "Neue Montreal", sans-serif;
+ font-size: 64px;
+ font-weight: 400;
+ line-height: 1.2;
+ margin: 0;
+ color: rgba(242, 242, 242, 1);
+ text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+  0 0 20px rgba(255, 255, 255, 0.3),
+  0 0 30px rgba(255, 255, 255, 0.2);
+ position: absolute;
+ top: 50px;
+ left: 50px;
+}
+
+.hero-subtitle {
+ font-family: "Neue Montreal", sans-serif;
+ font-size: var(--font-size-base);
+ font-weight: 500;
+ letter-spacing: var(--letter-spacing-tight);
+ line-height: 26px;
+ margin-top: 24px;
+ position: absolute;
+ top: 200px;
+ left: 50px;
+ color: #FFFFFF; /* ✅ Added this line */
+}
+
+
+.soln {
+ font-family: 'Gloock', serif;
+ font-size: 64px;
+ font-weight: 700;
+ line-height: 100%;
+ background: linear-gradient(180deg,
+   rgba(255, 255, 255, 1) 50%,
+   rgba(255, 255, 255, 0.7) 60%,
+   rgba(255, 255, 255, 0.3) 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+}
+
+.status {
+ font-family: "Neue Montreal", sans-serif;
+ color: #FFFFFF;
+ font-size: 13px;
+ font-weight: 700;
+ line-height: 26px;
+ position: absolute;
+ top: 430px;
+ left: 810px;;
+}
+
+
+
+
+
+/* ---------------------------
+ Arrow
+---------------------------- */
+.arrow {
+  position: absolute;
+  top: 924px;
+  left: 911px;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 8px white);
+}
+
+/* ---------------------------
+ Projects Container
+---------------------------- */
+.projects-container {
+ width: 100%;
+ max-width: 1364px;
+ margin: calc(645px + 280px) auto 120px auto;
+ display: flex;
+ flex-direction: column;
+ gap: 80px;
+ background: transparent;
+}
+
+/* ---------------------------
+ Footer
+---------------------------- */
+.footer {
+ position: relative;
+ z-index: 10;
+ padding: 48px 0;
+ background: transparent;
+ clear: both;
+}
+
+.footer-nav {
+ display: flex;
+ gap: 120px;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.footer-section {
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+}
+
+.footer-section h3 {
+ font-family: "Neue Montreal", sans-serif;
+ font-size: 12px;
+ font-weight: 500;
+ letter-spacing: 1.5px;
+ color: rgba(242, 242, 242, 0.6);
+ margin: 0;
+}
+
+.footer-section a {
+ font-family: "Neue Montreal", sans-serif;
+ font-size: 18px;
+ font-weight: 500;
+ color: rgba(242, 242, 242, 0.9);
+ text-decoration: none;
+ transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+ opacity: 1;
+}
+
+.copyright {
+ margin-top: 120px;
+ font-family: "Neue Montreal", sans-serif;
+ font-size: 18px;
+ font-weight: 500;
+ color: rgba(242, 242, 242, 0.9);
+ text-align: center;
+}
+
+.selected-work-title{
+  display: none;
+}
+
+/* =========================================== */
+/* --- MOBILE RESPONSIVE STYLES (WORK PAGE) --- */
+/* =========================================== */
+@media (max-width: 768px) {
+
+  /* --- 1. Simplify the Main Container --- */
+  .selected-work-title {
+  display: block; 
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(242, 242, 242, 0.5); 
+  /* margin-bottom: 40px; */ /* Remove margin from here */
+  position: relative; /* Needed for pseudo-element positioning if required */
+  padding-top: 40px; /* Add space above for the line */
+  margin-bottom: 40px; /* Keep space below title */
+}
+
+/* ✅ ADD THIS RULE */
+.selected-work-title::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Position relative to the title */
+  top: 0;           /* Place it at the very top */
+  left: -20%;        /* Align to the left */
+  width: 190%;      /* Make it full width */
+  height: 1px;      /* Line thickness */
+  background-color: rgba(242, 242, 242, 0.10); /* The color you specified */
+}
+  .scroll-container {
+    display: flex; /* This puts the items side-by-side */
+    align-items: center; /* This vertically aligns them */
+    gap: 10px; /* This adds space between the icon and text */
+    
+    /* Position the container correctly */
+    padding: 0 24px;
+    margin-bottom: 40px;
+  }
+  .box {
+    width: 100%;       /* Use full width */
+    height: auto;        /* Height adjusts to content */
+    margin: 0;           /* Remove desktop margins */
+    padding: 0 24px 60px 24px; /* Add mobile padding (top, sides, bottom) */
+    border-radius: 0;    /* Remove rounded corners */
+    box-sizing: border-box; /* Ensures padding is included in width */
+  }
+
+  /* --- 2. Hide Desktop-Only Decorative Elements --- */
+  .rectangle,
+  .ac-rectangle::before,
+  .box::before,
+  .apple-bar,
+  .plus-button {
+    display: none;
+  }
+
+
+
+  /* --- 3. Restyle the Text Container and Text --- */
+  .ac-rectangle {
+    position: static;     /* Let it flow naturally in the document */
+    transform: none;      /* Remove the centering transform */
+    width: 100%;
+    height: auto;
+    background-color: transparent; /* Remove the dark background */
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .hero-title,
+  .hero-subtitle,
+  .status {
+    position: static;    /* Remove absolute positioning */
+    transform: none;
+    text-align: left;    /* Ensure text is left-aligned */
+    width: 100%;
+    left: auto;
+    top: auto;
+    
+  }
+
+ .hero-title {
+  font-size: 330%; /* You can keep this or adjust */
+  font-weight: 10;
+  margin-top: -10%; 
+  margin-bottom: 24px; /* Increased space below title */
+
+  /* ✅ ADD THIS: Apply the white glow effect */
+  color: rgba(242, 242, 242, 1); /* Ensure base color is set */
+  text-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.4),
+    0 0 15px rgba(255, 255, 255, 0.2); 
+}
+
+.soln {
+  /* Keep existing font styles if needed */
+  font-family: 'Gloock', serif; /* Ensure Gloock font is applied */
+  font-weight: 700;
+  line-height: inherit; /* Inherit line-height from h1 */
+  font-size: inherit;   /* Inherit font-size from h1 */
+
+  /* ✅ UPDATED: Vertical gradient mask for the fade effect */
+  background: linear-gradient(
+    180deg,                     /* Direction: Top to Bottom */
+    rgba(255, 255, 255, 1) 0%,  /* White fully visible at the top */
+    rgba(255, 255, 255, 1) 50%, /* White fully visible until 60% down */
+    rgba(255, 255, 255, 0) 80%  /* Fade to transparent towards the bottom (adjust 90% as needed) */
+  );
+  -webkit-background-clip: text;  /* Apply gradient as a text mask */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make original text color transparent */
+  color: transparent;                   /* Fallback for text color */
+
+  /* Keep the glow from the parent h1 */
+  text-shadow: inherit; 
+}
+
+
+  .hero-subtitle {
+    display: none;     /* Prevent it from getting too wide */
+  }
+
+  .status {
+    margin-top: 10%;
+    color: #F2F2F280;
+    font-size: 140%;
+    font-weight: 300;
+
+  }
+
+  .status3 {
+    color: #F2F2F2E5;
+    font-size: 90%;
+  }
+  .status-desktop-only,
+  .status2{
+    display: none;
+  }
+
+  /* Find and replace the .arrow rule inside your @media block */
+
+.arrow {
+  /* Reset positioning to let it sit in the normal document flow */
+  position: static; 
+  width: 10%;
+
+}
+
+ .selected-work-title {
+    display: block; /* Makes it visible on mobile */
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(242, 242, 242, 0.5); /* #F2F2F2 with 50% opacity */
+    margin-bottom: 40px; /* Adds space below the title, before the first project */
+  }
+
+
+}

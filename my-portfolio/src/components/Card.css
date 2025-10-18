@@ -1,0 +1,206 @@
+/* Card container wrapper */
+.card-container-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+/* Individual card container */
+.card-container {
+    position: relative;
+    flex: 1;
+    max-width: calc(50% - 20px);
+}
+
+/* Card styling */
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+}
+
+/* Card images */
+.card-img-top, .card-img-top1 {
+    width: 100%;
+    height: 1013px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(242, 242, 242, 0.3);
+    padding: 1px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3),
+                inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.card-img-top {
+    margin-top: 70px;
+    margin-left: -80px;
+}
+
+.card-img-top1 {
+    margin-top: -100px;
+    margin-left: 80px;
+}
+
+/* Gradient glow behind cards */
+.left-card::before,
+.right-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.1) 20%,
+        rgba(255, 255, 255, 0.05) 40%,
+        transparent 70%
+    );
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.left-card::before {
+    transform: translateY(70px) translateX(-80px);
+}
+
+.right-card::before {
+    transform: translateY(-100px) translateX(80px);
+}
+
+/* Card body */
+.card-body, .card-body1 {
+    width: 100%;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* Card texts */
+.card-text1 {
+    font-family: "Neue Montreal", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: rgba(242, 242, 242, 1);
+    margin-left: -100px;
+}
+
+.card-text {
+    font-family: "Neue Montreal", sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 24px;
+    color: rgba(242, 242, 242, 0.6);
+    width: 80%;
+    margin-left: -100px;
+}
+
+.card-text2 {
+    font-family: "Neue Montreal", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: rgba(242, 242, 242, 0.9);
+    margin-top: 180px;
+    margin-left: 70px;
+    margin-bottom: 80px;
+    width: 500px;
+}
+
+/* =========================================== */
+/* --- CARD: MOBILE RESPONSIVE STYLES --- */
+/* =========================================== */
+
+/* =========================================== */
+/* --- CARD: MOBILE RESPONSIVE STYLES --- */
+/* =========================================== */
+
+
+@media (max-width: 768px) {
+  /* Stack the card pairs vertically */
+  .card-container-wrapper {
+    flex-direction: column;
+    margin: 60px 0 80px 0; /* Adjust vertical margins, remove horizontal */
+    gap: 40px;
+    padding: 0 24px; /* Add padding to the wrapper */
+    box-sizing: border-box;
+  }
+
+  /* Make individual cards full width */
+  .card-container {
+    max-width: 100%;
+  }
+
+  /* Adjust card layout - Make it a flex column */
+  .card {
+    gap: 24px; /* Space between image and text block */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  /* Base styles for images */
+  .card-img-top, 
+  .card-img-top1 {
+    margin: 0; 
+    height: auto; 
+    max-height: 70vh; 
+    border-radius: 16px;
+  }
+  
+  /* Base styles for text bodies */
+  .card-body, 
+  .card-body1 {
+    padding: 0; 
+  }
+
+  /* --- SPECIFIC ORDERING --- */
+  
+  /* Left card: Image (order 1), then Text (order 2) */
+  .left-card .card-img-top { order: 1; }
+  .left-card .card-body { order: 2; }
+
+  /* Right card: Text (order 1), then Image (order 2) */
+  .right-card .card-body1 { order: 1; }
+  .right-card .card-img-top1 { order: 2; }
+
+  /* --- Hide desktop effects --- */
+  .left-card::before,
+  .right-card::before {
+    display: none;
+  }
+
+  /* --- Text styling adjustments --- */
+  .card-text1,
+  .card-text,
+  .card-text2 {
+    margin: 0; 
+    width: 100%;
+    text-align: left;
+  }
+
+  .card-text1 { /* Title for left card */
+    font-size: 20px;
+    line-height: 1.4;
+    color: rgba(242, 242, 242, 1); 
+  }
+
+  .card-text { /* Body for left card */
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(242, 242, 242, 0.6); 
+  }
+
+  .card-text2 { /* Text for right card */
+    position: static; 
+    font-size: 14px; 
+    line-height: 1.6;
+    color: rgba(242, 242, 242, 0.9); 
+  }
+}
