@@ -87,11 +87,17 @@
     --------------------------- */
     .rectangle-button {
     position: absolute;
+    /* ✅ ADDED: Explicit positioning needed for z-index */
+    top: 50%; 
+    transform: translateY(-50%); 
     height: 34px;
-    width: 80px;
+    width: 80px; /* Keep your JS controlled width/left */
     background-color: rgba(242, 242, 242, 0.2);
     border-radius: 100px;
-    z-index: 1;
+    /* ✅ CHANGE z-index: 1 to z-index: 0 */
+    z-index: 0; 
+    pointer-events: none; /* Keep this */
+    transition: all 0.3s ease; /* Keep this */
 }
 
 
@@ -118,9 +124,7 @@
         transition: color 0.3s ease;
     }
 
-    .external-links .nav-link:hover {
-        color: black;
-    }
+    
 
     /* ---------------------------
     Active Tab Styling
