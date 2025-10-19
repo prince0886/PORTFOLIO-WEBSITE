@@ -71,8 +71,8 @@ const Navbar = () => {
     <nav className="navbar">
       {/* ✅ Add conditional class based on location.pathname */}
       <div className={`navbar-brand ${location.pathname === "/info" ? 'hide-on-info-mobile' : ''}`}>
-        <h1>Arnav Raj</h1>
-        <span className="tagline">Product Designer</span>
+        <h1>Prince Kumar</h1>
+        <span className="tagline">Frontend Developer</span>
       </div>
 
       <div className="nav-links">

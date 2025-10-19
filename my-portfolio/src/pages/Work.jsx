@@ -32,10 +32,10 @@ const Work = () => {
           </p>
           <p className="status">
             <span className="status-desktop-only">
-            Currently a UI/UX Designer. Based in India.<br />
+            <br />
           </span>
-  Formerly at Kinesis Lab <span  className="status2">, IIT Guwahati and SharkIn.</span>
-          <p className="status3">Designer at Emvo. based in India.</p>
+  {/* Formerly at Kinesis Lab <span  className="status2">, IIT Guwahati and SharkIn.</span> */}
+          <p className="status3">Former SDE Intern at Bluestock Fintech.</p>
 </p>
         </div>
       </div>
