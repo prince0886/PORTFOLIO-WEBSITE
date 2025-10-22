@@ -104,8 +104,8 @@ const Navbar = () => {
           @
         </button>
         <div className={`external-links ${mobileLinksOpen ? 'mobile-active' : ''}`}>
-          <a href="https://www.linkedin.com/in/arnav-raj-7a7296246/" className="nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://drive.google.com/drive/folders/136Os0Iyq4D61sJybNbFYByhAlsa0vW30" className="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a href="https://www.linkedin.com/in/prince-kumar-5ab306258/" className="nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://drive.google.com/file/d/1yK7d9sGcR53a5BC0ohtKlQ3jPVltTOpd/view?usp=drivesdk" className="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
     </nav>
