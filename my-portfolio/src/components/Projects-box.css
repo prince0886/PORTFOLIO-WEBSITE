@@ -1,382 +1,383 @@
 .box-one { 
-    width: 1164px;
-    height: 845px;
-    margin: 0 auto 280px auto; /* center horizontally */
-    background: transparent;
-    border-radius: 30px;
-    position: relative;
-    border: 1px solid #FFFFFF;
-    }
+  width: 1164px;
+  height: 845px;
+  margin: 0 auto 280px auto; /* center horizontally */
+  background: transparent;
+  border-radius: 30px;
+  position: relative;
+  border: 1px solid #FFFFFF;
+  }
 
-    .box-heading{
-        position: absolute;
-        top: 30px;
-        left: 37px;
-        font-family: "Neue Montreal", sans-serif;
-        font-size: 27px;
-        color: #FFFFFF;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-                    0 0 10px rgba(255, 255, 255, 0.3),
-                    0 0 15px rgba(255, 255, 255, 0.2);
-    }
-
-    .box-two {
-    width: 1134px;
-    height: 825px;
+  .box-heading{
     position: absolute;
-    top: 10px;
-    left: 50%; /* center horizontally */
-    transform: translateX(-50%); /* adjust position */
-    background: transparent;
-    border-radius: 30px;
-    background-color: #1A1A1A;
-    transition: background 0.4s ease;
-    }
+    top: 30px;
+    left: 37px;
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 27px;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+          0 0 10px rgba(255, 255, 255, 0.3),
+          0 0 15px rgba(255, 255, 255, 0.2);
+  }
 
-    /* Gradient hover */
-    .box-two:hover {
+  .box-two {
+  width: 1134px;
+  height: 825px;
+  position: absolute;
+  top: 10px;
+  left: 50%; /* center horizontally */
+  transform: translateX(-50%); /* adjust position */
+  background: transparent;
+  border-radius: 30px;
+  background-color: #1A1A1A;
+  transition: background 0.4s ease;
+  }
+
+  /* Gradient hover */
+  .box-two:hover {
+  background: linear-gradient(135deg, #C9C8EE 15%, #3A3A71 75%);
+  }
+
+  /* Add hover effect with gradient */
+  .box-two:hover {
     background: linear-gradient(135deg, #C9C8EE 15%, #3A3A71 75%);
-    }
+  }
 
-    /* Add hover effect with gradient */
-    .box-two:hover {
-        background: linear-gradient(135deg, #C9C8EE 15%, #3A3A71 75%);
-    }
+  /* Add this new rule to change text color on hover */
+  .box-two:hover .box-para {
+    color: #FFFFFF;
+  }
 
-    /* Add this new rule to change text color on hover */
-    .box-two:hover .box-para {
-        color: #FFFFFF;
-    }
+  /* Add this new rule to make the icon glow on hover */
+  .box-two:hover .icon1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+          0 0 20px rgba(255, 255, 255, 0.6),
+          0 0 30px rgba(255, 255, 255, 0.4),
+          0 0 40px rgba(201, 200, 238, 0.3);
+    transform: scale(1.05);
+  }
 
-    /* Add this new rule to make the icon glow on hover */
-    .box-two:hover .icon1 {
-        color: #ffffff;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                    0 0 20px rgba(255, 255, 255, 0.6),
-                    0 0 30px rgba(255, 255, 255, 0.4),
-                    0 0 40px rgba(201, 200, 238, 0.3);
-        transform: scale(1.05);
-    }
+  /* Pseudo-element for gradient border */
+  .box-two::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 30px; /* Same as .box-two */
+    padding: 1px; /* Border thickness */
+    background: linear-gradient(to bottom, #656565 10%, transparent 50%);
+    -webkit-mask: linear-gradient(white 0 0) content-box, 
+          linear-gradient(white 0 0) border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none; /* Prevents interaction */
+  }
 
-    /* Pseudo-element for gradient border */
-    .box-two::before {
-        content: "";
-        position: absolute;
-        top: -1px;
-        left: -1px;
-        right: -1px;
-        bottom: -1px;
-        border-radius: 30px; /* Same as .box-two */
-        padding: 1px; /* Border thickness */
-        background: linear-gradient(to bottom, #656565 10%, transparent 50%);
-        -webkit-mask: linear-gradient(white 0 0) content-box, 
-                    linear-gradient(white 0 0) border-box;
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        pointer-events: none; /* Prevents interaction */
-    }
+  .icon1{
+    color: #ffffff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 60px;
+    left: 1070px;
+    transition: transform 0.3s ease;
+  }
 
-    .icon1{
-        color: #ffffff;
-        font-size: 40px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: absolute;
-        top: 60px;
-        left: 1070px;
-        transition: transform 0.3s ease;
-    }
+  .box-two:hover + .icon1 {
+    transform: translateY(-50px); /* Move upward by 15px */
+  }
 
-    .box-two:hover + .icon1 {
-        transform: translateY(-50px); /* Move upward by 15px */
-    }
+  /* Add hover effect with gradient */
+  .box-two:hover {
+    background: linear-gradient(135deg, #C9C8EE 15%, #3A3A71 75%);
+  }
 
-    /* Add hover effect with gradient */
-    .box-two:hover {
-        background: linear-gradient(135deg, #C9C8EE 15%, #3A3A71 75%);
-    }
+  /* Add this new rule to change text color on hover */
+  .box-two:hover .box-para {
+    color: #FFFFFF;
+  }
 
-    /* Add this new rule to change text color on hover */
-    .box-two:hover .box-para {
-        color: #FFFFFF;
-    }
+  /* Add this new rule to make the icon glow on hover */
+  .box-two:hover .icon1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+          0 0 20px rgba(255, 255, 255, 0.6),
+          0 0 30px rgba(255, 255, 255, 0.4),
+          0 0 40px rgba(201, 200, 238, 0.3);
+    transform: scale(1.05);
+  }
 
-    /* Add this new rule to make the icon glow on hover */
-    .box-two:hover .icon1 {
-        color: #ffffff;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                    0 0 20px rgba(255, 255, 255, 0.6),
-                    0 0 30px rgba(255, 255, 255, 0.4),
-                    0 0 40px rgba(201, 200, 238, 0.3);
-        transform: scale(1.05);
-    }
-
-    .box-para{
-        position: absolute;
-        top: 65px;
-        left: 38px;
-        font-weight: 500;
-        font-family: "Neue Montreal", sans-serif;
-        color: #BABABA;
-        transition: color 0.3s ease; /* Add transition for smooth color change */
-    }
+  .box-para{
+    position: absolute;
+    top: 65px;
+    left: 38px;
+    font-weight: 500;
+    font-family: "Neue Montreal", sans-serif;
+    color: #BABABA;
+    transition: color 0.3s ease; /* Add transition for smooth color change */
+  }
 
 
 
-    .box-3{
-        width: 1000px;
-        height: 60px;
-        position: absolute;
-        top: 200px;
-        left: 80px;
-        background-color: #1E1E1E;
-        border-radius: 12px;
-        transition: transform 0.3s ease; /* Add transition for smooth movement */
-    }
+  .box-3{
+    width: 1000px;
+    height: 60px;
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+  }
 
-    /* Add this new rule to move box-3 upward on hover */
-    .box-two:hover + .box-3 {
-        transform: translateY(-15px); /* Move upward by 15px */
-    }
+  /* Add this new rule to move box-3 upward on hover */
+  .box-two:hover + .box-3 {
+    transform: translateY(-15px); /* Move upward by 15px */
+  }
 
-    .apple-bar1 {
-        display: flex;
-        gap: 6px;
-        position: absolute;
-        top: 20px;
-        left: 15px;
-        z-index: 2;
-    }
+  .apple-bar1 {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 2;
+  }
 
-    .small-box{
-        width: 195px;
-        height: 45px;
-        border-radius: 6px;
-        position: absolute;
-        top:10px;
-        left: 100px;
-        background-color: #333639;
-    }
+  .small-box{
+    width: 195px;
+    height: 45px;
+    border-radius: 6px;
+    position: absolute;
+    top:10px;
+    left: 100px;
+    background-color: #333639;
+  }
 
-    .plus-button-one{
-        position: absolute;
-        top: -10px;
-        left: 299px;
-        font-family: "Neue Montreal", sans-serif;
-        font-weight:0;
-        font-size: 38px;
-        line-height: 100%;
-        color: #BABABA;
-    }
+  .plus-button-one{
+    position: absolute;
+    top: -10px;
+    left: 299px;
+    font-family: "Neue Montreal", sans-serif;
+    font-weight:0;
+    font-size: 38px;
+    line-height: 100%;
+    color: #BABABA;
+  }
 
-    .box-4{
-        background-color: #333639;
-        width: 1000px;
-        height: 37px;
-        position: absolute;
-        top: 48px;
-    }
+  .box-4{
+    background-color: #333639;
+    width: 1000px;
+    height: 37px;
+    position: absolute;
+    top: 48px;
+  }
 
-    .small-box-4{
-        background-color: #292C2F;
-        width: 800px;
-        height: 18px;
-        border-radius: 6px;
-        position: absolute;
-        top: -5px;
-        left: 110px;
-    }
+  .small-box-4{
+    background-color: #292C2F;
+    width: 800px;
+    height: 18px;
+    border-radius: 6px;
+    position: absolute;
+    top: -5px;
+    left: 110px;
+  }
 
-    .browser-icons {
-        display: flex;
-        gap: 15px;
-        position: absolute;
-        top: 15px;
-        left: 15px;
-    }
+  .browser-icons {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
 
-    .icon {
-        color: #BABABA;
-        font-size: 18px;
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
+  .icon {
+    color: #BABABA;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
 
-    .icon:hover {
-        color: #FFFFFF;
-    }
+  .icon:hover {
+    color: #FFFFFF;
+  }
 
-    .reload{
-        height: 28px;
-        position: absolute;
-        top: -10px;
-        left: 58px;
-        filter: brightness(1.2) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
-        transition: filter 0.3s ease;
-    }
+  .reload{
+    height: 28px;
+    position: absolute;
+    top: -10px;
+    left: 58px;
+    filter: brightness(1.2) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+    transition: filter 0.3s ease;
+  }
 
-    .box-5{
-        background: linear-gradient(to right,
-            #292929 0%,
-            #747474 50%,
-            #272727 100%
-        );
-        width: 1000px;
-        height: 50px;
-        position: absolute;
-        top: 84px;
-    }
+  .box-5{
+    background: linear-gradient(to right,
+      #292929 0%,
+      #747474 50%,
+      #272727 100%
+    );
+    width: 1000px;
+    height: 50px;
+    position: absolute;
+    top: 84px;
+  }
 
-    .profile{
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: -7px;
-        left: 940px;
-    }
+  .profile{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -7px;
+    left: 940px;
+  }
 
-    .dot {
-        width: 3px;
-        height: 3px;
-        background-color: #FFFFFF;
-        border-radius: 50%;
-    }
-    .three-dots {
-        display: flex;
-        rotate: 90deg;
-        gap: 2px;
-        position: absolute;
-        top: 1px;
-        left: 963px;
-    }
+  .dot {
+    width: 3px;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+  }
+  .three-dots {
+    display: flex;
+    rotate: 90deg;
+    gap: 2px;
+    position: absolute;
+    top: 1px;
+    left: 963px;
+  }
 
-    .project1{
-        width: 1007px;
-        height: 510px;
-        position: absolute;
-        top: 130px;
-        left: -3px;
-    }
+  .project1{
+    width: 1007px;
+    height: 510px;
+    position: absolute;
+    top: 130px;
+    left: -3px;
+  }
 
-    /* =========================================== */
-    /* --- MOBILE RESPONSIVE STYLES --- */
-    /* =========================================== */
+  /* =========================================== */
+  /* --- MOBILE RESPONSIVE STYLES --- */
+  /* =========================================== */
 
-    /* =========================================== */
-    /* --- MOBILE RESPONSIVE STYLES --- */
-    /* =========================================== */
+  /* =========================================== */
+  /* --- MOBILE RESPONSIVE STYLES --- */
+  /* =========================================== */
 
 /* =========================================== */
 /* --- MOBILE RESPONSIVE STYLES --- */
 /* =========================================== */
 
 @media (max-width: 768px) {
-  /* 1. Make the main container fluid and let height be automatic */
-  .box-one {
-    position: static; /* Let it sit in the normal page flow */
-    width: 90%;      /* Use full width of the screen */
-    height: auto;     /* ✅ Let content inside determine the height */
-    margin-bottom: 40px;
-    padding: 24px;
-    box-sizing: border-box; /* Important for padding */
-    border-radius: 24px;
-    border: 1px solid #252525;
-    background-color: #1A1A1A;
-    background-repeat: no-repeat;
-  }
+ /* 1. Make the main container fluid and let height be automatic */
+ .box-one {
+  position: static; /* Let it sit in the normal page flow */
+  width: 90%;   /* Use full width of the screen */
+  height: auto;   /* ✅ Let content inside determine the height */
+  margin-bottom: 40px;
+  padding: 24px;
+  box-sizing: border-box; /* Important for padding */
+  border-radius: 24px;
+  border: 1px solid #252525;
+  background-color: #1A1A1A;
+  background-repeat: no-repeat;
+ }
 
-  .projects-box {
-    background-image:
-      radial-gradient(ellipse 70% 50% at 50% 10%, rgba(88, 88, 162, 0.2) 0%, transparent 100%),
-      radial-gradient(ellipse 10% 40% at 50% 100%, rgba(58, 58, 113, 0) 0%, transparent 100%);
-  }
+ .projects-box {
+  background-image:
+   radial-gradient(ellipse 70% 50% at 50% 10%, rgba(88, 88, 162, 0.2) 0%, transparent 100%),
+   radial-gradient(ellipse 10% 40% at 50% 100%, rgba(58, 58, 113, 0) 0%, transparent 100%);
+ }
 
-  .rainbow-box {
-    background-image:
-      radial-gradient(ellipse 70% 50% at 50% 10%, rgba(250, 214, 90, 0.1) 0%, transparent 100%),
-      radial-gradient(ellipse 10% 40% at 50% 100%, rgba(58, 58, 113, 0) 0%, transparent 100%);
-  }
+ .rainbow-box {
+  background-image:
+   radial-gradient(ellipse 70% 50% at 50% 10%, rgba(250, 214, 90, 0.1) 0%, transparent 100%),
+   radial-gradient(ellipse 10% 40% at 50% 100%, rgba(58, 58, 113, 0) 0%, transparent 100%);
+ }
 
-  .laundary-box {
-    background-image:
-      radial-gradient(ellipse 70% 50% at 50% 10%, rgba(88, 162, 88, 0.2) 0%, transparent 100%),
-      radial-gradient(ellipse 10% 40% at 50% 100%, rgba(58, 113, 58, 0) 0%, transparent 100%);
-  }
+ .laundary-box {
+  background-image:
+   radial-gradient(ellipse 70% 50% at 50% 10%, rgba(88, 162, 88, 0.2) 0%, transparent 100%),
+   radial-gradient(ellipse 10% 40% at 50% 100%, rgba(58, 113, 58, 0) 0%, transparent 100%);
+ }
 
-  /* 2. Make the inner containers fluid as well */
-  .box-two {
-    position: static; /* Remove absolute positioning */
-    transform: none;  /* Remove desktop transform */
-    width: 100%;
-    height: auto;     /* ✅ Let content inside determine the height */
-    background: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 32px;
-  }
-  
-  .box-3 {
-    position: static; /* Remove absolute positioning */
-    width: 100%;
-    height: auto;     /* ✅ Let the image inside determine the height */
-    background: none;
-    border-radius: 12px;
-    overflow: hidden;
-  }
+ /* 2. Make the inner containers fluid as well */
+ .box-two {
+  position: static; /* Remove absolute positioning */
+  transform: none; /* Remove desktop transform */
+  width: 100%;
+  height: auto;   /* ✅ Let content inside determine the height */
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+ }
+ 
+ .box-3 {
+  position: static; /* Remove absolute positioning */
+  width: 100%;
+  height: auto;   /* ✅ Let the image inside determine the height */
+  background: none;
+  border-radius: 12px;
+  overflow: hidden;
+ }
 
-  .box-para{
-    display: none;
-  }
+ .box-para{
+  display: none;
+ }
 
-  /* 3. Make the text and image elements fluid */
-  .box-heading,
-  .box-para,
-  .icon1,
-  .project1 {
-    position: static; /* Remove all absolute positioning */
-    transform: none;
-    text-align: left;
-    margin: 0;
-  }
+ /* 3. Make the text and image elements fluid */
+ .box-heading,
+ .box-para,
+ .icon1,
+ .project1 {
+  position: static; /* Remove all absolute positioning */
+  transform: none;
+  text-align: left;
+  margin: 0;
+ }
 
-  .box-heading {
-    font-size: 22px;
-  }
-  
-  .box-para {
-    font-size: 12px;
-    line-height: 1.5;
-    color: #BABABA;
-    margin-top: 8px; /* Add space below the heading */
-  }
-  
-  .icon1 {
-    font-size: 28px;
-    padding-left: 16px;
-  }
+ .box-heading {
+  font-size: 22px;
+ }
+ 
+ .box-para {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #BABABA;
+  margin-top: 8px; /* Add space below the heading */
+ }
+ 
+ .icon1 {
+  font-size: 28px;
+  padding-left: 16px;
+ }
 
-  .project1 {
-    width: 100%;    /* Image fills its container */
-    height: auto;   /* Maintains aspect ratio */
-    display: block;
-  }
+ .project1 {
+  width: 100%;  /* Image fills its container */
+  height: auto;  /* Maintains aspect ratio */
+  display: block;
+ }
 
-  /* 4. Hide all the unnecessary desktop-only decorative elements */
-  .box-4, .box-5, .small-box, .apple-bar1, .box-two::before {
-    display: none;
-  }
+ /* 4. Hide all the unnecessary desktop-only decorative elements */
+ .box-4, .box-5, .small-box, .apple-bar1, .box-two::before {
+  display: none;
+ }
 
-  /* 5. Disable all hover effects */
-  .box-two:hover,
-  .box-two:hover + .box-3 {
-    background: none;
-    transform: none !important;
-  }
-  .box-two:hover .box-para,
-  .box-two:hover .icon1 {
-    color: inherit;
-    text-shadow: none;
-    transform: none !important;
-  }
+ /* 5. Disable all hover effects */
+ .box-two:hover,
+ .box-two:hover + .box-3 {
+  background: none;
+  transform: none !important;
+ }
+ .box-two:hover .box-para,
+ .box-two:hover .icon1 {
+  color: inherit;
+  text-shadow: none;
+  transform: none !important;
+ }
 }
+
