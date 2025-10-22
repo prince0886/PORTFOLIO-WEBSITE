@@ -1,16 +1,22 @@
 import React from 'react';
 import './Projects-box.css';
 import reloadIcon from '../assets/Images/reload.png';
-import Project2 from '../assets/Images/project2.png';
+import Project2 from '../assets/Images/Triptap.jpeg';
 import Profile from '../assets/Images/Profile.png';
 
 const Rainbow = () => {
   return (
+    <a
+      href="https://github.com/1806PiYuSh1806/TripTap"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: 'none', color: 'inherit' }}
+    >
     <div className="box-one rainbow-box">
       <div className="box-two">
-        <h2 className="box-heading">Rainbow Education Platform</h2>
+        <h2 className="box-heading">TripTap</h2>
         <p className="box-para">
-          Enhancing learning with interactive and student-centric educational solutions.
+          Redefining ride-sharing with zero commission and 100% driver earnings.
         </p>
         <span className="icon1">→</span>
       </div>
@@ -48,6 +54,7 @@ const Rainbow = () => {
         </div>
       </div>
     </div>
+    </a>
   );
 };
 

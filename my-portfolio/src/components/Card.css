@@ -125,7 +125,7 @@
 @media (max-width: 768px) {
   /* Stack the card pairs vertically */
   .card-container-wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 60px 0 80px 0; /* Adjust vertical margins, remove horizontal */
     gap: 40px;
     padding: 0 24px; /* Add padding to the wrapper */
@@ -163,8 +163,8 @@
   /* --- SPECIFIC ORDERING --- */
   
   /* Left card: Image (order 1), then Text (order 2) */
-  .left-card .card-img-top { order: 1; }
-  .left-card .card-body { order: 2; }
+  .left-card .card-img-top { order: 2; }
+  .left-card .card-body { order: 1; }
 
   /* Right card: Text (order 1), then Image (order 2) */
   .right-card .card-body1 { order: 1; }

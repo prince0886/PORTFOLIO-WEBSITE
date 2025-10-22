@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import ProjectsBox from "../components/Projects-box";
 import Rainbow from "../components/Rainbow";
 import Laundary from "../components/Laundary";
+import ElectionPortal from "../components/ElectionPortal";
 import Footer from "../components/Footer";
 import scrollIcon from '../assets/Images/Image [icon-scroll-down].svg';
 
@@ -48,7 +49,7 @@ const Work = () => {
       <ProjectsBox />
       <Rainbow />
       <Laundary />
-
+      <ElectionPortal />
       {/* Footer inside work-page to ensure gradient covers it */}
       <Footer />
     </div>

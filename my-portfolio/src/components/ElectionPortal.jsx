@@ -1,25 +1,18 @@
 import React from 'react';
-import './Projects-box.css';
+import './ElectionPortal.css';
 import reloadIcon from '../assets/Images/reload.png';
-import Portal from '../assets/Images/QuickChat.png';
+import Project2 from '../assets/Images/Portal.png';
 import Profile from '../assets/Images/Profile.png';
 
-const ProjectsBox = () => {
+const ElectionPortal = () => {
   return (
-    <a
-      href="https://prince0886.github.io/WETALK/"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ textDecoration: 'none', color: 'inherit' }}
-    >
-    <div className="box-one projects-box">
+    
+    <div className="box-one rainbow-box">
       <div className="box-two">
-        <div className="box-two-text">
-          <h2 className="box-heading">QuickChat</h2>
-          <p className="box-para">
-            Connecting conversations with speed, security, and simplicity.
-          </p>
-        </div>
+        <h2 className="box-heading">Election Portal</h2>
+        <p className="box-para">
+          Under-Devlopment! Coming Soon
+        </p>
         <span className="icon1">→</span>
       </div>
 
@@ -52,12 +45,12 @@ const ProjectsBox = () => {
         <div className="box-5"></div>
 
         <div className="election-project">
-          <img className="project1" src={Portal} alt="Voting Portal Screenshot" />
+          <img className="project1" src={Project2} alt="Rainbow Screenshot" />
         </div>
       </div>
     </div>
-    </a>
+    
   );
 };
 
-export default ProjectsBox;
+export default ElectionPortal;

@@ -330,7 +330,7 @@
     font-size: 12px;
     line-height: 1.5;
     color: #BABABA;
-    margin-top: 8px; /* Add space below the heading */
+    margin-bottom:10px; /* Add space below the heading */
   }
   
   .icon1 {
