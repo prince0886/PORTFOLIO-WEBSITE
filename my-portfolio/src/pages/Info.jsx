@@ -33,7 +33,7 @@ const Info = () => {
       <Card
         leftImg={firstone}
         leftTitle="Wait, I'm an Engineer?"
-        leftText="I'm a fourth-year CSE student at IIITG (Class of 2026—yes, I still survive on caffeine and console.logs). I figured building responsive websites is more fun than responding to hardware errors. Now I spend my days turning divs into dreams and bugs into features. You're welcome, internet."
+        leftText="I'm a fourth-year CSE student at IIITG (Class of 2026 yes, I still survive on caffeine and console.logs). I figured building responsive websites is more fun than responding to hardware errors. Now I spend my days turning divs into dreams and bugs into features. You're welcome, internet."
         rightImg={second}
         rightText="Here's my story!"
       />
@@ -50,7 +50,7 @@ const Info = () => {
       {/* Third pair of cards */}
       <Card
         leftImg={sixth}
-        leftTitle="How I Discovered Development"
+        leftTitle="How I Started Development"
         leftText="Let’s just say I stumbled into web development after years of yelling at websites that broke if you so much as blinked wrong. One day, it hit me maybe someone should care if the internet actually works for people (radical idea, I know). So, I ditched my old design job where “can you make it more web 3.0?” was considered solid feedback for the chaotic beauty of code. Broken layouts? Plenty. Sleepless nights chasing a rogue semicolon? More than I’d like to admit. Competence? Lightly toasted. But hey, at least I’m not deploying sites that crash harder than Internet Explorer on a good day."
         rightImg={fourth}
         rightText="Frontend was my messy situationship."
