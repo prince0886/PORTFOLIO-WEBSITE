@@ -27,7 +27,7 @@ const Footer = () => {
             LinkedIn
           </a>
           <a
-            href="https://drive.google.com/file/d/1yK7d9sGcR53a5BC0ohtKlQ3jPVltTOpd/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1pkw_Uq1Ra_DYr5yWIlbRMSVQPWtvQlU3/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
